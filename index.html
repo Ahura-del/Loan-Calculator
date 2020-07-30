@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <title>Loan Calculator</title>
+    <style>
+        .resault{
+            display: none;
+        }
+        .loading-area{
+            display: none;
+        }
+        .form-resault{
+            display: none;
+        }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card mt-5">
+            <div class="card-body text-center">
+                <div class="erorr-area"></div>
+              <h1 class="heading display-5">Loan Calculator</h1>
+              <form>
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="amount"
+                      placeholder="Amount"
+                      onfocus="this.placeholder=''"
+                      onblur="this.placeholder='Amount'"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">%</span>
+                    </div>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="interest"
+                      placeholder="Interest"
+                      onfocus="this.placeholder=''"
+                      onblur="this.placeholder='Interest'"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="year"
+                      placeholder="Year"
+                      onfocus="this.placeholder=''"
+                      onblur="this.placeholder='Year'"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="submit"
+                    value="Calculate"
+                    class="btn btn-dark btn-block"
+                    id="calculate"
+                  />
+                </div>
+                <div class="form-group">
+                    <input
+                      type="reset"
+                      value="Rest"
+                      id="rest"
+                      class="btn btn-danger btn-block"
+                    />
+                  </div>
+              </form>
+            </div>
+          </div>
+          <div class="card resault mt-2">
+            <div class="card-body text-center">
+              <h2>Resault</h2>
+              <!-- loading -->
+              <div class="loading-area">
+                <img src="loading.gif" alt="" />
+              </div>
+
+              <div class="form-group mt-5 form-resault">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Pay of Month</div>
+                  </div>
+                  <input type="text" id="paymonth" class="form-control" readonly />
+                </div>
+                <div class="input-group mt-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">Total Payment</div>
+                  </div>
+                  <input type="text" id="totalpay" class="form-control" readonly />
+                </div>
+                <div class="input-group mt-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">pay Interest</div>
+                  </div>
+                  <input type="text" id="payiterest" class="form-control" readonly />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
